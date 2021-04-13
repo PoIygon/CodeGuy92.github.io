@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help my website improve.
 title: "[Bug Report]"
-labels: ''
+labels: bug
 assignees: CodeGuy92
 
 ---
