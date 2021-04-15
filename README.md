@@ -1,5 +1,5 @@
 # LankyBox01
-Hello! This is my main personal website. [Additional context here...]
+Hello! This is my main personal website. I use it for testing purposes & other useful stuff. [Additional context here...]
 
 ## Projects
 In my free time, i create some random projects that have no use but are still pretty cool.
