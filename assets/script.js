@@ -7,4 +7,8 @@ function onload() {
     document.cookie = "username=" + location.hash.substring(1);
     location.href = "index.html";
   }
+  if (document.cookie == "username=LankyBox01"){
+    var ppanel = document.getElementById("admpanl");
+    ppanel.style.display = "block";
+  }
 }
