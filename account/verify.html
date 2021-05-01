@@ -32,15 +32,13 @@ fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&li
 .then(res => {
   if (res[0].value == code1) {
     yes()
+  alert("Account verified!")
+  location.href = "../index.html"
+  document.cookie = "username=" + res[0].user;
   }else{
     not()
   }
 })
-}
-
-function yes() {
-  alert("Account verified!")
-  location.href = "../index.html"
 }
 
 function not() {
