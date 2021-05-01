@@ -7,7 +7,7 @@
 
 <title>Verify - LankyBox01's Website</title>
 
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="./assets/style.css">
 <script src="assets/script.js" defer></script>
 </head>
 <body onload="onload()">
@@ -40,7 +40,7 @@ fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&li
 
 function yes() {
   alert("Account verified!")
-  location.reload();
+  location.href = "./index.html"
 }
 
 function not() {
