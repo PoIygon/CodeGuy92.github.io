@@ -17,6 +17,6 @@ function loadcode() {
 fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&limit=40`)
 .then(res => res.json())
 .then(res => {
-  alert("Last code sent was:" + \n + "Value:" + res[0].value + \n + "By:" + res[0].user)
+  alert("Last code sent was " + res[0].value + " by " + res[0].user)
 })
 }
