@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for my website.
 title: "[Feature Request]"
-labels: bug
+labels: feature
 assignees: CodeGuy92
 
 ---
