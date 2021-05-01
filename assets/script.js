@@ -3,4 +3,8 @@ function onload() {
   if (cookie.length > 8) {
     document.getElementById("accoun").innerHTML = "Welcome back, " + cookie.substring(9) + "!";
   }
+  if (location.hash !== ""){
+    document.cookie = "username=" + location.hash.substring(1);
+    location.href = "index.html";
+  }
 }
