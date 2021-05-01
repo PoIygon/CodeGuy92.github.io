@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Verify - LankyBox01's Website</title>
+
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js" defer></script>
+</head>
+<body onload="onload()">
+<center>
+<font size="5">LankyBox01's Website</font>
+<br>
+<font>Hello, I'm LankyBox01. You may recognize me from <a href="https://scratch.mit.edu/discuss/">The Scratch Forums!</a></font>
+<br>
+<br>
+<div class="buttons">
+<b>Your code is:</b> <font id="c"></font>
+<br>
+<br>
+<button onclick="check()">Done</button>
+<script>
+var code1 = Math.round(Math.random(1, 10) * 10000000);
+document.getElementById("c").innerText = code1;
+
+function check() {
+fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&limit=40`)
+.then(res => res.json())
+.then(res => {
+  if (res[0].value == code1) {
+    yes()
+  }else{
+    not()
+  }
+})
+}
+
+function yes() {
+  alert("Account verified!")
+  location.reload();
+}
+
+function not() {
+  alert("Account not verified!")
+  location.reload();
+}
+</script></div>
+</center>
+</body>
+</html>
