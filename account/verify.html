@@ -31,7 +31,7 @@ fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&li
 .then(res => res.json())
 .then(res => {
   if (res[0].value == code1) {
-  document.cookie = "username=" + res[0].user + "expires=Thu, 18 Dec 2025 12:00:00 UTC";
+  document.cookie = "username=" + res[0].user + "expires=Thu, 18 Dec 2050 12:00:00 UTC; path=../index.html";
   alert("Account verified!")
   location.href = "../index.html"
   }else{
