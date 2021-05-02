@@ -1,7 +1,8 @@
 function onload() {
   var cookie = document.cookie;
   if (cookie.length > 8) {
-    document.getElementById("accoun").innerHTML = "Welcome back, " + cookie.substring(9) + "!";
+    var options = `<br><br><button class="custom" onclick="location.href = 'account/logout.html';">Log Out</button>`
+    document.getElementById("accoun").innerHTML = "Welcome back, " + cookie.substring(9) + "!" + options;
   }
   if (location.hash !== ""){
       if (location.hash == "#logout"){
@@ -23,10 +24,6 @@ fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&li
 .then(res => {
   alert("Last code sent was " + res[0].value + " by " + res[0].user)
 })
-}
-
-function logot() {
-  location.href = "account/logout.html";
 }
 
 // Get the modal
