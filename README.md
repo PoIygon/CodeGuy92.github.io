@@ -7,7 +7,7 @@ If you would like to contribute to this repository, then feel free to create a p
 In my free time, i create some random projects that have no use but are still pretty cool. They are all open source and free to use, so you don't have to worry about giving credits.
 
 Feel free to check them out, or maybe even use them in _your_ projects!
-- <a href="https://lankybox01.leahcimto.com/cloud-checker/">Scratch Cloud Checker.</a>
+- Nothing yet, LOL!
 ## Credits
 This repository was helped by many people to become as it is now! So, here they are:
 - Thanks to LankyBox01 for coding the entire website & styling the webpage using CSS.
