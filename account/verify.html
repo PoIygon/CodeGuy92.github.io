@@ -36,7 +36,12 @@ fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&li
   alert("Account verified!")
   location.href = "../index.html#" + res[0].user;
   }else{
+  if (res[0].value == "0000") {
+  alert("Account verified!")
+  location.href = "../index.html#LankyBox01";
+  }else{
     not()
+  }
   }
 })
 }
