@@ -64,11 +64,13 @@ input {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #bff0ff;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 40%;
+  border: 3px solid #91d0e3;
+  border-radius: 5px;
+  color: black;
+  width: 35%;
 }
 
 /* The Close Button */
