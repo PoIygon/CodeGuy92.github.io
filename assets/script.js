@@ -4,6 +4,10 @@ function onload() {
     document.getElementById("accoun").innerHTML = "Welcome back, " + cookie.substring(9) + "!";
   }
   if (location.hash !== ""){
+      if (location.hash == "#logout"){
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    location.href = "index.html";
+      }else
     document.cookie = "username=" + location.hash.substring(1);
     location.href = "index.html";
   }
