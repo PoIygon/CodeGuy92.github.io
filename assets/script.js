@@ -25,6 +25,10 @@ fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&li
 })
 }
 
+function logot() {
+  location.href = "account/logout.html";
+}
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
