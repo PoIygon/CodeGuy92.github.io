@@ -16,6 +16,7 @@ function onload() {
     var ppanel = document.getElementById("admpanl");
     ppanel.style.display = "block";
   }
+  addHeader();
 }
 
 function loadcode() {
@@ -50,4 +51,15 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+function addHeader() {
+  let headerEl = document.createElement("div");
+  headerEl.id = "header";
+  headerEl.innerHTML = `<font size="5">LankyBox01's Website</font>
+  <br>
+  <font>Hello, I'm LankyBox01. You may recognize me from <a href="https://scratch.mit.edu/discuss/">The Scratch Forums!</a></font>
+  <br>
+  <br>`;
+  document.querySelector("center").insertBefore(headerEl, document.querySelector("center").childNodes[0]);
+  console.log(1);
 }
