@@ -16,7 +16,7 @@ function onload(custom) {
     var ppanel = document.getElementById("admpanl");
     ppanel.style.display = "block";
   }
-  addHeader(custom);
+  addHeader(custom === undefined ? {} : custom);
 }
 
 function loadcode() {
@@ -55,9 +55,9 @@ window.onclick = function(event) {
 function addHeader(config) {
   let headerEl = document.createElement("div");
   headerEl.id = "header";
-  headerEl.innerHTML = `<font size="5">${config?.title || "LankyBox01's Website"}</font>
+  headerEl.innerHTML = `<font size="5">${config.title || "LankyBox01's Website"}</font>
   <br>
-  <font>${config?.paragraph || 'Hello, I\'m LankyBox01. You may recognize me from <a href="https://scratch.mit.edu/discuss/">The Scratch Forums!</a>'}</font>
+  <font>${config.paragraph || 'Hello, I\'m LankyBox01. You may recognize me from <a href="https://scratch.mit.edu/discuss/">The Scratch Forums!</a>'}</font>
   <br>
   <br>`;
   document.querySelector("center").insertBefore(headerEl, document.querySelector("center").childNodes[0]);
