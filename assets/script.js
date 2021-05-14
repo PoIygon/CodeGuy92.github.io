@@ -23,7 +23,7 @@ fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&li
 .then(res => res.json())
 .then(res => {
   modal.style.display = "block";
-  document.getElementById("box-content1") = "Last code sent was " + res[0].value + " by " + res[0].user;
+  document.getElementById("box-content1").innerText = "Last code sent was " + res[0].value + " by " + res[0].user;
 })
 }
 
