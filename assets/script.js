@@ -52,3 +52,10 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function addHeader(title, text) {
+  let headerEl = document.createElement("div");
+  headerEl.id = "header";
+  headerEl.innerHTML = `<font size="5">` + title + `</font> <br>` + text;
+  document.querySelector("center").insertBefore(headerEl, document.querySelector("center").childNodes[0]);
+}
