@@ -1,4 +1,3 @@
-function onload() {
   var cookie = document.cookie;
   if (cookie.length > 8) {
     var options = `<br><br><button class="custom" onclick="location.href = 'account/logout.html';">Log Out</button>`
@@ -16,7 +15,6 @@ function onload() {
     var ppanel = document.getElementById("admpanl");
     ppanel.style.display = "block";
   }
-}
 
 function loadcode() {
 fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&limit=40`)
