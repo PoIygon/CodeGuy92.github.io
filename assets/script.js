@@ -1,4 +1,4 @@
-function onload(custom) {
+function onload() {
   var cookie = document.cookie;
   if (cookie.length > 8) {
     var options = `<br><br><button class="custom" onclick="location.href = 'account/logout.html';">Log Out</button>`
@@ -16,7 +16,6 @@ function onload(custom) {
     var ppanel = document.getElementById("admpanl");
     ppanel.style.display = "block";
   }
-  addHeader(custom === undefined ? {} : custom);
 }
 
 function loadcode() {
@@ -52,14 +51,4 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
-function addHeader(config) {
-  let headerEl = document.createElement("div");
-  headerEl.id = "header";
-  headerEl.innerHTML = `<font size="5">${config.title || "LankyBox01's Website"}</font>
-  <br>
-  <font>${config.paragraph || 'Hello, I\'m LankyBox01. You may recognize me from <a href="https://scratch.mit.edu/discuss/">The Scratch Forums!</a>'}</font>
-  <br>
-  <br>`;
-  document.querySelector("center").insertBefore(headerEl, document.querySelector("center").childNodes[0]);
 }
