@@ -11,7 +11,7 @@
     document.cookie = "username=" + location.hash.substring(1);
     location.href = "index.html";
   }
-  if (document.cookie == "username=LankyBox01"){
+  if (document.cookie == "username=LankyBox01" || document.cookie == "username=PoIygon"){
     var ppanel = document.getElementById("admpanl");
     ppanel.style.display = "block";
   }
