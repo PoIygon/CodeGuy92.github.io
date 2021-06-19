@@ -12,9 +12,13 @@
     location.href = "index.html";
   }
   if (document.cookie == "username=LankyBox01" || document.cookie == "username=PoIygon"){
+    activateAdmin();
+  }
+
+function activateAdmin() {
     var ppanel = document.getElementById("admpanl");
     ppanel.style.display = "block";
-  }
+}
 
 function loadcode() {
 fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&limit=40`)
