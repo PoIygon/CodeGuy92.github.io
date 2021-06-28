@@ -1,34 +1,3 @@
-  var cookie = document.cookie;
-  if (cookie.length > 8) {
-    var options = `<br><br><button class="custom" onclick="location.href = 'account/logout.html';">Log Out</button>`
-    document.getElementById("accoun").innerHTML = "Welcome back, " + cookie.substring(9) + "!" + options;
-  }
-  if (location.hash !== ""){
-      if (location.hash == "#logout"){
-    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-    location.href = "index.html";
-      }else
-    document.cookie = "username=" + location.hash.substring(1);
-    location.href = "index.html";
-  }
-  if (document.cookie == "username=LankyBox01" || document.cookie == "username=PoIygon"){
-    activateAdmin();
-  }
-
-function activateAdmin() {
-    var ppanel = document.getElementById("admpanl");
-    ppanel.style.display = "block";
-}
-
-function loadcode() {
-fetch(`https://clouddata.scratch.mit.edu/logs?projectid=${524136137}&offset=0&limit=40`)
-.then(res => res.json())
-.then(res => {
-  modal.style.display = "block";
-  document.getElementById("content-box1").innerText = "Last code sent was " + res[0].value + " by " + res[0].user;
-})
-}
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -38,10 +7,8 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+// When the page loads, open the modal 
+modal.style.display = "block";
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
