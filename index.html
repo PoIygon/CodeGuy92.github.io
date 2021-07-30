@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>LankyBox01's Website!</title>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/base.min.css">
+<link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/components.min.css">
+<link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/utilities.min.css">
+<style>
+body {
+	background: rgb(26,32,44);
+	background: linear-gradient(90deg, rgba(26,32,44,1) 0%, rgba(29,48,87,1) 100%);
+	animation: move 15s ease infinite;
+	background-size: 500% 500%;
+}
 
-<title>ThatRandomGuy's Website</title>
-
-<link rel="stylesheet" href="assets/style.css">
-<script src="assets/script.js" defer></script>
+@keyframes move {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>
 </head>
-<body onload="addHeader('ThatRandomGuy&rsquo;s Website', 'Hey, welcome to my site. What&rsquo;s up?')">
-<center>
+<body class="text-white antialiased">
+<div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto" style="margin-top: 120px;">
+<div class=" grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="col-span-6">
+<h1 class="font-bold text-4xl md:text-5xl max-w-xl leading-tight">LankyBox01's Website!
+</h1>
+<p class="leading-relaxed mt-8 font-semibold typedjs">
+Hello, maties. This is my main personal website. I use it for testing purposes & other useless (but kinda cool) stuff. If you ever see me doing commits on this repository, it's probably just me fooling around and adding unnecessary stuff to the website. I'm actually mainly active on YouTube, so check my channel out :)
 <br>
-<div class="buttons">
-<font size="5">My Media</font>
 <br>
-<br>
-<button class="custom" onclick="window.location.href = 'https://twitter.com/_ThatRandomGuy8/'">Twitter</button> - <button class="custom" onclick="window.location.href = 'https://scratch.mit.edu/users/LankyBox01/'">Scratch</button>
+<a href="https://www.youtube.com/channel/UCHwtT6K-PpdUzNWrE17kTXw" class="underline">https://www.youtube.com/channel/UCHwtT6K-PpdUzNWrE17kTXw</a>
+</p>
 </div>
-
-<!-- Modal Box Testing -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id="content-box1">My site is currently in beta. Thanks for visiting!</p>
-  </div>
 </div>
-</center>
+</div>
 </body>
 </html>
